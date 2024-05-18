@@ -9,8 +9,8 @@ const Content = () => {
         const int=Math.floor(Math.random()*3);
         return fruit[int];
       }
-      const handleClick=()=>{
-        console.log('Thanks for the support');
+      const handleClick=(e)=>{
+        console.log(e.target);
       }
       const handleClick2=(name)=>{
         console.log(`Thanks for the support ${name}`);
@@ -18,8 +18,8 @@ const Content = () => {
   return (
     <main>
      <p>I Like  {handleNameChange()}</p>
-     <button onClick={handleClick}> Subscripe </button>
-     <button onClick={()=>handleClick2('Vijay')}>Subscripe  Button</button>
+     
+     <button onClick={(e)=>handleClick(e)}>Subscripe  Button</button>
     </main>
     
   )
