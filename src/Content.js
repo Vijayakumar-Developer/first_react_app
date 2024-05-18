@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 
 
 const Content = () => {
@@ -10,14 +11,14 @@ const Content = () => {
         return fruit[int];
       }
       const handleClick=(e)=>{
-        console.log(e.target);
+        console.log(e.target.innerText);
       }
       const handleClick2=(name)=>{
         console.log(`Thanks for the support ${name}`);
       }
   return (
     <main>
-     <p>I Like  {handleNameChange()}</p>
+     <p onDoubleClick={()=>handleClick2('Vijay')}>I Like  {handleNameChange()}</p>
      
      <button onClick={(e)=>handleClick(e)}>Subscripe  Button</button>
     </main>
