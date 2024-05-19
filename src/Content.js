@@ -10,17 +10,26 @@ const Content = () => {
         const int=Math.floor(Math.random()*3);
         return fruit[int];
       }
-      const handleClick=(e)=>{
-        console.log(e.target.innerText);
+
+      const [count, setCount]=useState(99);
+
+      function incrementFunction(){
+        setCount(prevCount=>prevCount+1);
       }
-      const handleClick2=(name)=>{
-        console.log(`Thanks for the support ${name}`);
+
+      function decrementFunction(){
+        setCount(prevCount=>prevCount-1);
       }
+
   return (
     <main>
-     <p onDoubleClick={()=>handleClick2('Vijay')}>I Like  {handleNameChange()}</p>
+     <p>I Like </p>
      
-     <button onClick={(e)=>handleClick(e)}>Subscripe  Button</button>
+     <button>Subscripe  Button</button>
+     <button onClick={ decrementFunction }>-</button>
+     <span>{count}</span>
+     <button onClick={ incrementFunction }>+</button>
+     
     </main>
     
   )
