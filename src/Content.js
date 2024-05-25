@@ -27,6 +27,7 @@ const Content = () => {
 
   return (
     <main>
+      {(items.length)?(
       <ul>
         
           {items.map((item)=>(
@@ -43,6 +44,10 @@ const Content = () => {
           ))}
         
       </ul>
+      ) :(
+        <p style={{marginTop:"2rem"}}>No Lists Found</p>
+      )
+    }
     </main>
     
   )
